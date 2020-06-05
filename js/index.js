@@ -63,11 +63,32 @@ nav5.textContent = siteContent.nav["nav-item-5"];
 let nav6 = document.querySelector("nav > a:nth-child(6)");
 nav6.textContent = siteContent.nav["nav-item-6"];
 
+//  new childs for nav
+
+let newChild = document.createElement('a');
+newChild.textContent = "Blog";
+let newSib = document.createElement('a');
+newSib.textContent = "Contact";
+
+let navSelect = document.querySelector("nav");
+navSelect.appendChild(newChild);
+navSelect.prepend(newSib)
+// colors for nav buttons
+let allA = document.querySelectorAll('a'), i , len;
+
+for (i = 0, len = allA.length; i < len; i++) {
+  allA[i].style.color = 'green';
+};
+
+newChild.style.color = "black";
+newSib.style.color = "black";
+
 //set-up for cta h1
 let h1Cta = document.querySelector(".cta .cta-text h1");
 h1Cta.textContent = siteContent.cta.h1;
 
 h1Cta.setAttribute('style', 'width: 40%;');
+
 
 //set-up for cta button
 let ctaBtn = document.querySelector(".cta .cta-text button");
@@ -140,3 +161,4 @@ contactLast.textContent = siteContent["contact"]["email"];
   foo.textContent = siteContent["footer"]["copyright"]
 
   
+
