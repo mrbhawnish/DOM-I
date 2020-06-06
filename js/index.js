@@ -162,3 +162,12 @@ contactLast.textContent = siteContent["contact"]["email"];
 
   
 
+//Stretch goal
+
+let getBody = document.querySelector("body");
+getBody.style["background-color"] = "lightgray";
+
+ctaImg.setAttribute("style", "opacity: 0.4;");
+
+mainImg.setAttribute("style", "opacity: 0.4;");
+
