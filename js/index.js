@@ -40,3 +40,134 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//Set-up for nav
+let nav1 = document.querySelector("nav > a:nth-child(1)");
+nav1.textContent = siteContent.nav["nav-item-1"];
+
+let nav2 = document.querySelector("nav > a:nth-child(2)");
+nav2.textContent = siteContent.nav["nav-item-2"];
+
+let nav3 = document.querySelector("nav > a:nth-child(3)");
+nav3.textContent = siteContent.nav["nav-item-3"];
+
+let nav4 = document.querySelector("nav > a:nth-child(4)");
+nav4.textContent = siteContent.nav["nav-item-4"];
+
+let nav5 = document.querySelector("nav > a:nth-child(5)");
+nav5.textContent = siteContent.nav["nav-item-5"];
+
+let nav6 = document.querySelector("nav > a:nth-child(6)");
+nav6.textContent = siteContent.nav["nav-item-6"];
+
+//  new childs for nav
+
+let newChild = document.createElement('a');
+newChild.textContent = "Blog";
+let newSib = document.createElement('a');
+newSib.textContent = "Contact";
+
+let navSelect = document.querySelector("nav");
+navSelect.appendChild(newChild);
+navSelect.prepend(newSib)
+// colors for nav buttons
+let allA = document.querySelectorAll('a'), i , len;
+
+for (i = 0, len = allA.length; i < len; i++) {
+  allA[i].style.color = 'green';
+};
+
+newChild.style.color = "black";
+newSib.style.color = "black";
+
+//set-up for cta h1
+let h1Cta = document.querySelector(".cta .cta-text h1");
+h1Cta.textContent = siteContent.cta.h1;
+
+h1Cta.setAttribute('style', 'width: 40%;');
+
+
+//set-up for cta button
+let ctaBtn = document.querySelector(".cta .cta-text button");
+ctaBtn.textContent = siteContent.cta.button;
+
+//set up for TOP CONTENT
+
+let featureH1 = document.querySelector(".top-content .text-content:nth-child(1) > h4");
+
+featureH1.textContent = siteContent["main-content"]["features-h4"];
+
+let firstPara = document.querySelector(".top-content .text-content:nth-child(1) > p");
+
+firstPara.textContent = siteContent["main-content"]["features-content"];
+
+
+ let aboutH1 = document.querySelector(".top-content .text-content:nth-child(2) > h4");
+
+ let secondPara = document.querySelector(".top-content .text-content:nth-child(2) > p");
+
+secondPara.textContent = siteContent["main-content"]["about-content"];
+
+aboutH1.textContent = siteContent["main-content"]["about-h4"];
+
+//middle-content image
+
+let mainImg = document.getElementById("middle-img");
+mainImg.src = siteContent["main-content"]["middle-img-src"];
+
+
+//Set up for bottom content
+
+let bottomH4 = document.querySelector(".bottom-content .text-content:nth-child(1) > h4");
+bottomH4.textContent = siteContent["main-content"]["services-h4"];
+
+let bottomChild = document.querySelector(".bottom-content .text-content:nth-child(1) > p");
+bottomChild.textContent = siteContent["main-content"]["services-content"];
+
+
+let middleH4 = document.querySelector(".bottom-content .text-content:nth-child(2) > h4");
+middleH4.textContent = siteContent["main-content"]["product-h4"];
+
+let middleP = document.querySelector(".bottom-content .text-content:nth-child(2) > p");
+middleP.textContent = siteContent["main-content"]["product-content"];
+
+let lastH = document.querySelector(".bottom-content .text-content:nth-child(3) > h4");
+lastH.textContent = siteContent["main-content"]["vision-h4"];
+
+let lastPar = document.querySelector(".bottom-content .text-content:nth-child(3) > p");
+lastPar.textContent = siteContent["main-content"]["vision-content"];
+
+
+//bottom content below
+let firstH = document.querySelector(".container .contact h4");
+firstH.textContent = siteContent["contact"]["contact-h4"];
+
+let contactM1 = document.querySelector(".container .contact > p:nth-child(2)");
+contactM1.textContent = siteContent["contact"]["address"];
+
+let contactM2 = document.querySelector(".container .contact > p:nth-child(3)");
+contactM2.textContent = siteContent["contact"]["phone"];
+
+let contactLast = document.querySelector(".container .contact > p:nth-child(4)");
+contactLast.textContent = siteContent["contact"]["email"];
+
+
+  //footer below
+
+  let foo = document.querySelector("footer p");
+  foo.textContent = siteContent["footer"]["copyright"]
+
+  
+
+//Stretch goal
+
+let getBody = document.querySelector("body");
+getBody.style["background-color"] = "lightgray";
+
+ctaImg.setAttribute("style", "opacity: 0.4;");
+
+mainImg.setAttribute("style", "opacity: 0.4;");
+
